@@ -82,4 +82,4 @@ mvn spring-boot:run
 
 ### <span id='apis'>4. Utilização das APIs</span>
 
-A documentação das APIs pode ser acessada clicando <a href='./index.html'>aqui.</a>
+A documentação das APIs pode ser acessada clicando <a href='https://otaviosilva22.github.io/java-ecommerce/'>aqui.</a>
