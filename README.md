@@ -1,5 +1,5 @@
 # Exemplicafação de backend Java Spring Boot para Ecommerce
-Simples exemplo de APIs para o funcionamento básico de um ecommerce.
+Simples exemplo de APIs para o funcionamento básico de um sistema de vendas.
 
 ## Tecnologias utilizadas
 - [Java Spring Boot](https://spring.io/projects/spring-boot)
@@ -83,3 +83,10 @@ mvn spring-boot:run
 ### <span id='apis'>4. Utilização das APIs</span>
 
 A documentação das APIs pode ser acessada clicando <a href='https://otaviosilva22.github.io/java-ecommerce/'>aqui.</a>
+
+## Autor
+Otávio Augusto Souza Silva.
+
+
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/otaviosilva22/)](https://www.linkedin.com/in/otaviosilva22/)
+[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:otavio.ssilva22@gmail.com)](mailto:otavio.ssilva22@gmail.com)
