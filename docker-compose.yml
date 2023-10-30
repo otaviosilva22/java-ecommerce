@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+
+  mysql:
+    image: mysql:8.0.27
+    container_name: ecommerce
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_DATABASE: ecommerce
+    ports:
+      - "3306:3306"

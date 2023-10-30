@@ -1,0 +1,521 @@
+{
+    "info": {
+        "_postman_id": "36ea2406-b275-4947-a880-58fbea0ffaa4",
+        "name": "ecommerce",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "user",
+            "item": [
+                {
+                    "name": "createUser",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:8080/user/",
+                            "path": [
+                                "user"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\": \"teste@teste.com\",\n  \"address\": \"R. Teste 123\",\n  \"name\": \"Teste 2\",\n  \"password\": \"123\",\n  \"username\": \"bardequito\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "readUser",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/user/?id=b2c72434-4fd0-425f-bc2e-f02a51a2cd49",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "b2c72434-4fd0-425f-bc2e-f02a51a2cd49"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "user"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                },
+                {
+                    "name": "updateUser",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "http://localhost:8080/user/",
+                            "path": [
+                                "user"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"id\": \"b2c72434-4fd0-425f-bc2e-f02a51a2cd49\",\n  \"email\": \"otavio.silva@teste.com\",\n  \"address\": \"R. Teste 12\",\n  \"name\": \"Teste\",\n  \"password\": \"123\",\n  \"username\": \"bardequito\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "deleteUser",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8080/user/?id=b2c72434-4fd0-425f-bc2e-f02a51a2cd49",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "b2c72434-4fd0-425f-bc2e-f02a51a2cd49"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "user"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                },
+                {
+                    "name": "readAllUsers",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/user/all",
+                            "path": [
+                                "user",
+                                "all"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "product",
+            "item": [
+                {
+                    "name": "createProduct",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:8080/product/",
+                            "path": [
+                                "product"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"description\": \"Produto de limpeza\",\n  \"lable\": \"Detergente\",\n  \"price\": 2.0,\n  \"quantity\": 2,\n  \"code\": \"54321\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "readProduct",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/product/?id=6d98bae2-55f8-43a5-9236-6de56d9e79f2",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "6d98bae2-55f8-43a5-9236-6de56d9e79f2"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "product"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                },
+                {
+                    "name": "updateProduct",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "http://localhost:8080/product/",
+                            "path": [
+                                "product"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"id\": \"362a9a8b-970a-4831-a667-7f692714d2f4\",\n  \"code\": \"12345\",\n  \"lable\": \"Sabão em pó\",\n  \"description\": \"Produto de limpeza\",\n  \"quantity\": 10,\n  \"price\": 2.0,\n  \"createdAt\": \"2023-10-30T16:03:43.10227\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "deleteProduct",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8080/product/?id=6d98bae2-55f8-43a5-9236-6de56d9e79f2",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "6d98bae2-55f8-43a5-9236-6de56d9e79f2"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "product"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                },
+                {
+                    "name": "readAllProducts",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/product/all",
+                            "path": [
+                                "product",
+                                "all"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "sale",
+            "item": [
+                {
+                    "name": "createSale",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:8080/sale/",
+                            "path": [
+                                "sale"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"userId\": \"7094017d-eb1c-4fbc-b0d7-fee38f9bbcdb\",\n  \"total\": 0\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "readSaleByUserId",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/sale/?id=7094017d-eb1c-4fbc-b0d7-fee38f9bbcdb",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "7094017d-eb1c-4fbc-b0d7-fee38f9bbcdb"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "sale"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                },
+                {
+                    "name": "deleteSale",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8080/sale/?id=082ab1d4-d25a-4945-8ace-594876a28925",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "082ab1d4-d25a-4945-8ace-594876a28925"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "sale"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                },
+                {
+                    "name": "updateSale",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "http://localhost:8080/sale/",
+                            "path": [
+                                "sale"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"id\": \"82846e54-4565-4ae1-8119-0681c6d33cfa\",\n  \"userId\": \"7094017d-eb1c-4fbc-b0d7-fee38f9bbcdb\",\n  \"total\": 0,\n  \"createdAt\": \"2023-10-30T16:04:08.877829\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "readBySaleId",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/sale/idSale?id=082ab1d4-d25a-4945-8ace-594876a28925",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "082ab1d4-d25a-4945-8ace-594876a28925"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "sale",
+                                "idSale"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                },
+                {
+                    "name": "readAllSales",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/sale/all",
+                            "path": [
+                                "sale",
+                                "all"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "saleProduct",
+            "item": [
+                {
+                    "name": "createSaleProduct",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:8080/saleProduct/",
+                            "path": [
+                                "saleProduct"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"saleId\": \"82846e54-4565-4ae1-8119-0681c6d33cfa\",\n  \"productId\": \"362a9a8b-970a-4831-a667-7f692714d2f4\",\n  \"quantity\": 2\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "readSaleProduct",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/saleProduct/id=",
+                            "path": [
+                                "saleProduct",
+                                "id="
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                },
+                {
+                    "name": "readAllSaleProduct",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8080/saleProduct/all",
+                            "path": [
+                                "saleProduct",
+                                "all"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                },
+                {
+                    "name": "updateSaleProduct",
+                    "request": {
+                        "method": "PATCH",
+                        "url": {
+                            "raw": "http://localhost:8080/saleProduct/",
+                            "path": [
+                                "saleProduct"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"id\": \"e3ace45d-ff6c-48b5-862b-5c3c6130f420\",\n  \"saleId\": \"82846e54-4565-4ae1-8119-0681c6d33cfa\",\n  \"productId\": \"362a9a8b-970a-4831-a667-7f692714d2f4\",\n  \"quantity\": 0,\n  \"createdAt\": \"2023-10-30T16:55:01.511934\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "deleteSaleProduct",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8080/saleProduct/?id=1bd003c2-7e64-45bd-beb4-a832964a132d",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "1bd003c2-7e64-45bd-beb4-a832964a132d"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "saleProduct"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
