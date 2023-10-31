@@ -1,5 +1,5 @@
-# Backend Java Spring Boot para um sistema de vendas
-Simples exemplo de APIs para o funcionamento básico de um sistema de vendas.
+# Backend Java Spring Boot para sistema de vendas online
+Simples exemplo de APIs CRUD para um sistema de vendas
 
 ## Tecnologias utilizadas
 - [Java Spring Boot](https://spring.io/projects/spring-boot)
