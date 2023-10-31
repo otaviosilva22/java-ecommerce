@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.ifsuldeminas</groupId>
-	<artifactId>ecommerce</artifactId>
+	<artifactId>saleproject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ecommerce</name>
-	<description>Ecommerce crud project for Spring Boot</description>
+	<name>saleproject</name>
+	<description>saleproject crud project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

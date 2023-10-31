@@ -1,4 +1,4 @@
-package br.com.ifsuldeminas.ecommerce.saleProduct;
+package br.com.ifsuldeminas.saleproject.saleProduct;
 
 import java.util.UUID;
 
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.ifsuldeminas.ecommerce.product.IProductRepository;
-import br.com.ifsuldeminas.ecommerce.sale.ISaleRepository;
+import br.com.ifsuldeminas.saleproject.product.IProductRepository;
+import br.com.ifsuldeminas.saleproject.sale.ISaleRepository;
 
 
 @RestController
@@ -124,16 +124,18 @@ public class SaleProductController {
 
 
             sale.setTotal(sale.getTotal() - (saleProductCreated.getQuantity() * product.getPrice()));
-            sale.setTotal(sale.getTotal() + (saleProductModel.getQuantity() * product.getPrice()));
+            
             
             product.setQuantity((product.getQuantity() + saleProductCreated.getQuantity()));
-            product.setQuantity(product.getQuantity() - saleProductModel.getQuantity());
+            
             
             if (product.getQuantity() < saleProductModel.getQuantity()){
                 jsonObject.put("error", "Invalid quantity");
                 return ResponseEntity.status(400).body(jsonObject.toString());
             }
-            
+
+            sale.setTotal(sale.getTotal() + (saleProductModel.getQuantity() * product.getPrice()));
+            product.setQuantity(product.getQuantity() - saleProductModel.getQuantity());
             var saleUpdated = this.saleRepository.save(sale);
             var productUpdated = this.productRepository.save(product);
 

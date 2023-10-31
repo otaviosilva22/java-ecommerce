@@ -1,7 +1,9 @@
-package br.com.ifsuldeminas.ecommerce.sale;
+package br.com.ifsuldeminas.saleproject.sale;
 
+import java.util.List;
 import java.util.UUID;
 
+import org.apache.catalina.connector.Response;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -51,9 +53,9 @@ public class SaleController {
 
     @GetMapping("/")
     public ResponseEntity<Object> read(@RequestParam UUID id){
+       
         try{
-            var sale = this.saleRepository.findByIdUser((UUID) id);
-
+            List<SaleModel> sale = this.saleRepository.findByIdUser((UUID) id);
             if (sale == null){
                 JSONObject jsonObj = new JSONObject();
                 jsonObj.put("error", "Sale not found");
@@ -64,7 +66,6 @@ public class SaleController {
         }catch(Exception e){
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("error", e.getMessage());
-
             return ResponseEntity.status(500).body(jsonObject.toString());
         }
     }

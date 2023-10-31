@@ -1,4 +1,4 @@
-package br.com.ifsuldeminas.ecommerce.product;
+package br.com.ifsuldeminas.saleproject.saleProduct;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -12,26 +12,18 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 @Data
-@Entity(name = "tb_product")
-public class ProductModel {
+@Entity(name = "tb_saleproduct")
+public class SaleProductModel {
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
-    
-    @Column(unique = true, nullable = false)
-    private String code;
 
     @Column(nullable = false)
-    private String lable;
-
+    private UUID saleId;
     @Column(nullable = false)
-    private String description;
-
+    private UUID productId;
     @Column(nullable = false)
     private Integer quantity;
-    
-    @Column(nullable = false)
-    private double price;
 
     @CreationTimestamp
     private LocalDateTime createdAt;

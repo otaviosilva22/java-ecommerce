@@ -1,0 +1,1976 @@
+{
+	"info": {
+		"_postman_id": "0d8a0259-a840-460f-bd22-5e5a82fd4405",
+		"name": "saleproject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21952608"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"teste@teste.com\",\n  \"address\": \"R. Teste 123\",\n  \"name\": \"Teste 2\",\n  \"password\": \"123\",\n  \"username\": \"userteste\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"teste@teste.com\",\n  \"address\": \"R. Teste 123\",\n  \"name\": \"Teste 2\",\n  \"password\": \"123\",\n  \"username\": \"userteste\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:34:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"e7e2875a-9da6-4ac7-9fa0-f66fecac5e74\",\n    \"username\": \"userteste\",\n    \"name\": \"Teste 2\",\n    \"password\": \"123\",\n    \"email\": \"teste@teste.com\",\n    \"address\": \"R. Teste 123\",\n    \"createdAt\": \"2023-10-31T09:34:11.544481762\"\n}"
+						}
+					]
+				},
+				{
+					"name": "readUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/?id=e7e2875a-9da6-4ac7-9fa0-f66fecac5e74",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "e7e2875a-9da6-4ac7-9fa0-f66fecac5e74",
+									"description": "user id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user/?id=e7e2875a-9da6-4ac7-9fa0-f66fecac5e74",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "e7e2875a-9da6-4ac7-9fa0-f66fecac5e74",
+											"description": "user id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:34:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"e7e2875a-9da6-4ac7-9fa0-f66fecac5e74\",\n    \"username\": \"userteste\",\n    \"name\": \"Teste 2\",\n    \"password\": \"123\",\n    \"email\": \"teste@teste.com\",\n    \"address\": \"R. Teste 123\",\n    \"createdAt\": \"2023-10-31T09:34:11.544482\"\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user/?id=e7e2875a-9da6-4ac7-9fa0-f66fecac5e75",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "e7e2875a-9da6-4ac7-9fa0-f66fecac5e75",
+											"description": "user id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:36:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\"error\":\"User not found\"}"
+						}
+					]
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"e7e2875a-9da6-4ac7-9fa0-f66fecac5e74\",\n  \"email\": \"otavio.silva@teste.com\",\n  \"address\": \"R. Teste 123\",\n  \"name\": \"Teste Atualizado\",\n  \"password\": \"123\",\n  \"username\": \"userteste\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"e7e2875a-9da6-4ac7-9fa0-f66fecac5e74\",\n  \"email\": \"otavio.silva@teste.com\",\n  \"address\": \"R. Teste 123\",\n  \"name\": \"Teste Atualizado\",\n  \"password\": \"123\",\n  \"username\": \"userteste\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:35:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"e7e2875a-9da6-4ac7-9fa0-f66fecac5e74\",\n    \"username\": \"userteste\",\n    \"name\": \"Teste Atualizado\",\n    \"password\": \"123\",\n    \"email\": \"otavio.silva@teste.com\",\n    \"address\": \"R. Teste 123\",\n    \"createdAt\": \"2023-10-31T09:34:11.544482\"\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"e7e2875a-9da6-4ac7-9fa0-f66fecac5e75\",\n  \"email\": \"otavio.silva@teste.com\",\n  \"address\": \"R. Teste 123\",\n  \"name\": \"Teste Atualizado\",\n  \"password\": \"123\",\n  \"username\": \"userteste\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										""
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:36:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\"error\":\"User not found\"}"
+						}
+					]
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/?id=e7e2875a-9da6-4ac7-9fa0-f66fecac5e74",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "e7e2875a-9da6-4ac7-9fa0-f66fecac5e74",
+									"description": "user id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user/?id=e7e2875a-9da6-4ac7-9fa0-f66fecac5e74",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "e7e2875a-9da6-4ac7-9fa0-f66fecac5e74",
+											"description": "user id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:37:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"User deleted successfuly\"}"
+						}
+					]
+				},
+				{
+					"name": "readAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:35:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"4d8927ef-0008-4676-81f8-ee21b4f52e61\",\n        \"username\": \"bardequito\",\n        \"name\": \"Teste 2\",\n        \"password\": \"123\",\n        \"email\": \"teste@teste.com\",\n        \"address\": \"R. Teste 123\",\n        \"createdAt\": \"2023-10-31T09:28:41.156582\"\n    },\n    {\n        \"id\": \"e7e2875a-9da6-4ac7-9fa0-f66fecac5e74\",\n        \"username\": \"userteste\",\n        \"name\": \"Teste 2\",\n        \"password\": \"123\",\n        \"email\": \"teste@teste.com\",\n        \"address\": \"R. Teste 123\",\n        \"createdAt\": \"2023-10-31T09:34:11.544482\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"description\": \"Produto de limpeza\",\n  \"lable\": \"Detergente\",\n  \"price\": 2.0,\n  \"quantity\": 2,\n  \"code\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "500",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"description\": \"Produto de limpeza\",\n  \"lable\": \"Detergente\",\n  \"price\": 2.0,\n  \"quantity\": 2,\n  \"code\": \"54321\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/product/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product",
+										""
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "104"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:38:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\"error\":\"could not execute statement; SQL [n/a]; constraint [tb_product.UK_mxigvnb3t9elnxdksn1qsjswu]\"}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"description\": \"Produto de limpeza\",\n  \"lable\": \"Detergente\",\n  \"price\": 2.0,\n  \"quantity\": 2,\n  \"code\": \"1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/product/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:38:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"d5f83d0f-c2f4-49e8-9739-b6ac69885233\",\n    \"code\": \"1234\",\n    \"lable\": \"Detergente\",\n    \"description\": \"Produto de limpeza\",\n    \"quantity\": 2,\n    \"price\": 2,\n    \"createdAt\": \"2023-10-31T09:38:18.321052905\"\n}"
+						}
+					]
+				},
+				{
+					"name": "readProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/?id=d5f83d0f-c2f4-49e8-9739-b6ac69885233",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "d5f83d0f-c2f4-49e8-9739-b6ac69885233"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/product/?id=d5f83d0f-c2f4-49e8-9739-b6ac69885233",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "d5f83d0f-c2f4-49e8-9739-b6ac69885233"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:38:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"d5f83d0f-c2f4-49e8-9739-b6ac69885233\",\n    \"code\": \"1234\",\n    \"lable\": \"Detergente\",\n    \"description\": \"Produto de limpeza\",\n    \"quantity\": 2,\n    \"price\": 2,\n    \"createdAt\": \"2023-10-31T09:38:18.321053\"\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/product/?id=d5f83d0f-c2f4-49e8-9739-b6ac69885232",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "d5f83d0f-c2f4-49e8-9739-b6ac69885232"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:38:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\"error\":\"Product not foud\"}"
+						}
+					]
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"bb3fee01-6ada-477f-93b2-f1a24bc882b3\",\n  \"code\": \"12345\",\n  \"lable\": \"Sabão em pó\",\n  \"description\": \"Produto de limpeza\",\n  \"quantity\": 10,\n  \"price\": 2.0,\n  \"createdAt\": \"2023-10-30T16:03:43.10227\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"bb3fee01-6ada-477f-93b2-f1a24bc882b3\",\n  \"code\": \"12345\",\n  \"lable\": \"Sabão em pó\",\n  \"description\": \"Produto de limpeza\",\n  \"quantity\": 10,\n  \"price\": 2.0,\n  \"createdAt\": \"2023-10-30T16:03:43.10227\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/product/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:39:41 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"bb3fee01-6ada-477f-93b2-f1a24bc882b3\",\n    \"code\": \"12345\",\n    \"lable\": \"Sabão em pó\",\n    \"description\": \"Produto de limpeza\",\n    \"quantity\": 10,\n    \"price\": 2,\n    \"createdAt\": \"2023-10-30T16:03:43.10227\"\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/?id=bb3fee01-6ada-477f-93b2-f1a24bc882b3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "bb3fee01-6ada-477f-93b2-f1a24bc882b3",
+									"description": "product id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/product/?id=bb3fee01-6ada-477f-93b2-f1a24bc882b3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "bb3fee01-6ada-477f-93b2-f1a24bc882b3",
+											"description": "product id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:40:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\"id\":\"bb3fee01-6ada-477f-93b2-f1a24bc882b3\",\"message\":\"Product deleted successfuly\"}"
+						}
+					]
+				},
+				{
+					"name": "readAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/product/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/product/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:39:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"bb3fee01-6ada-477f-93b2-f1a24bc882b3\",\n        \"code\": \"54321\",\n        \"lable\": \"Detergente\",\n        \"description\": \"Produto de limpeza\",\n        \"quantity\": 2,\n        \"price\": 2,\n        \"createdAt\": \"2023-10-31T09:28:55.551803\"\n    },\n    {\n        \"id\": \"d5f83d0f-c2f4-49e8-9739-b6ac69885233\",\n        \"code\": \"1234\",\n        \"lable\": \"Detergente\",\n        \"description\": \"Produto de limpeza\",\n        \"quantity\": 2,\n        \"price\": 2,\n        \"createdAt\": \"2023-10-31T09:38:18.321053\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "sale",
+			"item": [
+				{
+					"name": "createSale",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"4d8927ef-0008-4676-81f8-ee21b4f52e61\",\n  \"total\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sale/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": \"4d8927ef-0008-4676-81f8-ee21b4f52e61\",\n  \"total\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/sale/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sale",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:40:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n    \"userId\": \"4d8927ef-0008-4676-81f8-ee21b4f52e61\",\n    \"total\": 0,\n    \"createdAt\": \"2023-10-31T09:40:40.772423595\"\n}"
+						}
+					]
+				},
+				{
+					"name": "readSaleByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sale/?id=4d8927ef-0008-4676-81f8-ee21b4f52e61",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4d8927ef-0008-4676-81f8-ee21b4f52e61",
+									"description": "user id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/sale/?id=4d8927ef-0008-4676-81f8-ee21b4f52e61",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sale",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "4d8927ef-0008-4676-81f8-ee21b4f52e61",
+											"description": "user id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:53:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"04aadf91-522e-490f-92fc-527d2fa0fe4f\",\n        \"userId\": \"4d8927ef-0008-4676-81f8-ee21b4f52e61\",\n        \"total\": 0,\n        \"createdAt\": \"2023-10-31T09:29:26.51055\"\n    },\n    {\n        \"id\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n        \"userId\": \"4d8927ef-0008-4676-81f8-ee21b4f52e61\",\n        \"total\": 10,\n        \"createdAt\": \"2023-10-31T09:40:40.772424\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "deleteSale",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sale/?id=04aadf91-522e-490f-92fc-527d2fa0fe4f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "04aadf91-522e-490f-92fc-527d2fa0fe4f",
+									"description": "sale id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/sale/?id=04aadf91-522e-490f-92fc-527d2fa0fe4f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sale",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "04aadf91-522e-490f-92fc-527d2fa0fe4f",
+											"description": "sale id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "82"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:53:59 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\"id\":\"04aadf91-522e-490f-92fc-527d2fa0fe4f\",\"message\":\"Sale deleted successfuly\"}"
+						}
+					]
+				},
+				{
+					"name": "updateSale",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n  \"userId\": \"4d8927ef-0008-4676-81f8-ee21b4f52e61\",\n  \"total\": 10,\n  \"createdAt\": \"2023-10-30T16:04:08.877829\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sale/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n  \"userId\": \"4d8927ef-0008-4676-81f8-ee21b4f52e61\",\n  \"total\": 10,\n  \"createdAt\": \"2023-10-30T16:04:08.877829\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/sale/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sale",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:42:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n    \"userId\": \"4d8927ef-0008-4676-81f8-ee21b4f52e61\",\n    \"total\": 10,\n    \"createdAt\": \"2023-10-31T09:40:40.772424\"\n}"
+						}
+					]
+				},
+				{
+					"name": "readBySaleId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sale/idSale?id=04aadf91-522e-490f-92fc-527d2fa0fe4f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								"idSale"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "04aadf91-522e-490f-92fc-527d2fa0fe4f"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/sale/idSale?id=04aadf91-522e-490f-92fc-527d2fa0fe4f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sale",
+										"idSale"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "04aadf91-522e-490f-92fc-527d2fa0fe4f"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:53:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"04aadf91-522e-490f-92fc-527d2fa0fe4f\",\n    \"userId\": \"4d8927ef-0008-4676-81f8-ee21b4f52e61\",\n    \"total\": 0,\n    \"createdAt\": \"2023-10-31T09:29:26.51055\"\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/sale/idSale?id=04aadf91-522e-490f-92fc-527d2fa0fe4f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sale",
+										"idSale"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "04aadf91-522e-490f-92fc-527d2fa0fe4f"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:54:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\"error\":\"Sale not found\"}"
+						}
+					]
+				},
+				{
+					"name": "readAllSales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sale/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/sale/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sale",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:42:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"04aadf91-522e-490f-92fc-527d2fa0fe4f\",\n        \"userId\": \"4d8927ef-0008-4676-81f8-ee21b4f52e61\",\n        \"total\": 0,\n        \"createdAt\": \"2023-10-31T09:29:26.51055\"\n    },\n    {\n        \"id\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n        \"userId\": \"4d8927ef-0008-4676-81f8-ee21b4f52e61\",\n        \"total\": 10,\n        \"createdAt\": \"2023-10-31T09:40:40.772424\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "saleProduct",
+			"item": [
+				{
+					"name": "createSaleProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"saleId\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n  \"productId\": \"d5f83d0f-c2f4-49e8-9739-b6ac69885233\",\n  \"quantity\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/saleProduct/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"saleProduct",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"saleId\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n  \"productId\": \"d5f83d0f-c2f4-49e8-9739-b6ac69885233\",\n  \"quantity\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/saleProduct/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"saleProduct",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:55:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"0e36de64-62da-4f65-9e9d-e106471213e5\",\n    \"saleId\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n    \"productId\": \"d5f83d0f-c2f4-49e8-9739-b6ac69885233\",\n    \"quantity\": 1,\n    \"createdAt\": \"2023-10-31T09:55:05.07918283\"\n}"
+						}
+					]
+				},
+				{
+					"name": "readSaleProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/saleProduct/?id=0e36de64-62da-4f65-9e9d-e106471213e5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"saleProduct",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "0e36de64-62da-4f65-9e9d-e106471213e5",
+									"description": "sale product id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/saleProduct/?id=0e36de64-62da-4f65-9e9d-e106471213e5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"saleProduct",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "0e36de64-62da-4f65-9e9d-e106471213e5",
+											"description": "sale product id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:55:49 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"0e36de64-62da-4f65-9e9d-e106471213e5\",\n    \"saleId\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n    \"productId\": \"d5f83d0f-c2f4-49e8-9739-b6ac69885233\",\n    \"quantity\": 1,\n    \"createdAt\": \"2023-10-31T09:55:05.079183\"\n}"
+						}
+					]
+				},
+				{
+					"name": "readAllSaleProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/saleProduct/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"saleProduct",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/saleProduct/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"saleProduct",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:56:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"0e36de64-62da-4f65-9e9d-e106471213e5\",\n        \"saleId\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n        \"productId\": \"d5f83d0f-c2f4-49e8-9739-b6ac69885233\",\n        \"quantity\": 1,\n        \"createdAt\": \"2023-10-31T09:55:05.079183\"\n    },\n    {\n        \"id\": \"2a90c44c-93b1-4fc4-a900-89cfcba64527\",\n        \"saleId\": \"04aadf91-522e-490f-92fc-527d2fa0fe4f\",\n        \"productId\": \"bb3fee01-6ada-477f-93b2-f1a24bc882b3\",\n        \"quantity\": 0,\n        \"createdAt\": \"2023-10-31T09:29:54.062228\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "updateSaleProduct",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"dd888848-6881-4281-b3fa-f4439646dded\",\n    \"saleId\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n    \"productId\": \"d5f83d0f-c2f4-49e8-9739-b6ac69885233\",\n    \"quantity\": 2,\n    \"createdAt\": \"2023-10-31T09:57:19.349795\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/saleProduct/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"saleProduct",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"id\": \"0e36de64-62da-4f65-9e9d-e106471213e5\",\n        \"saleId\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n        \"productId\": \"d5f83d0f-c2f4-49e8-9739-b6ac69885233\",\n        \"quantity\": 0,\n        \"createdAt\": \"2023-10-31T09:55:05.079183\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/saleProduct/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"saleProduct",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:56:31 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"0e36de64-62da-4f65-9e9d-e106471213e5\",\n    \"saleId\": \"906d7c8f-20bf-4e89-9a33-c145e0498602\",\n    \"productId\": \"d5f83d0f-c2f4-49e8-9739-b6ac69885233\",\n    \"quantity\": 0,\n    \"createdAt\": \"2023-10-31T09:55:05.079183\"\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteSaleProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/saleProduct/?id=0e36de64-62da-4f65-9e9d-e106471213e5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"saleProduct",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "0e36de64-62da-4f65-9e9d-e106471213e5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/saleProduct/?id=0e36de64-62da-4f65-9e9d-e106471213e5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"saleProduct",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "0e36de64-62da-4f65-9e9d-e106471213e5"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 12:56:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2023-10-31T12:56:58.994+00:00\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"message\": \"No message available\",\n    \"path\": \"/saleProduct\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

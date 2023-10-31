@@ -1,4 +1,4 @@
-package br.com.ifsuldeminas.ecommerce.saleProduct;
+package br.com.ifsuldeminas.saleproject.saleProduct;
 
 import java.util.UUID;
 

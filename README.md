@@ -1,4 +1,4 @@
-# Exemplicafação de backend Java Spring Boot para Ecommerce
+# Backend Java Spring Boot para um sistema de vendas
 Simples exemplo de APIs para o funcionamento básico de um sistema de vendas.
 
 ## Tecnologias utilizadas
@@ -35,12 +35,12 @@ version: "3"
 services:
   mysql:
     image: mysql:8.0.27
-    container_name: ecommerce
+    container_name: saledatabase
     environment:
       MYSQL_ROOT_PASSWORD: <root_password>
       MYSQL_USER: <user>
       MYSQL_PASSWORD: <user_password>
-      MYSQL_DATABASE: ecommerce
+      MYSQL_DATABASE: saledatabase
     ports:
       - "3306:3306"
 ```
@@ -58,7 +58,7 @@ Substitua o arquivo application.properties pelas credenciais definidas no contai
 ```properties
 #application.properties
 
-spring.datasource.url=jdbc:mysql://localhost:3306/ecommerce
+spring.datasource.url=jdbc:mysql://localhost:3306/saledatabase
 spring.datasource.username=<user>
 spring.datasource.password=<user_password>
 
@@ -82,7 +82,7 @@ mvn spring-boot:run
 
 ### <span id='apis'>4. Utilização das APIs</span>
 
-A documentação das APIs pode ser acessada clicando <a href='https://otaviosilva22.github.io/java-ecommerce/'>aqui.</a>
+A documentação das APIs pode ser acessada clicando <a href='https://otaviosilva22.github.io/java-springboot-saleproject/'>aqui.</a>
 
 ## Autor
 Otávio Augusto Souza Silva.

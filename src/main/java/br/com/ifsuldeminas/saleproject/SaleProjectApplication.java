@@ -1,13 +1,13 @@
-package br.com.ifsuldeminas.ecommerce;
+package br.com.ifsuldeminas.saleproject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EcommerceApplication {
+public class SaleProjectApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EcommerceApplication.class, args);
+		SpringApplication.run(SaleProjectApplication.class, args);
 	}
 
 }

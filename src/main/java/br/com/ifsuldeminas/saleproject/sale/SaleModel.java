@@ -1,4 +1,4 @@
-package br.com.ifsuldeminas.ecommerce.sale;
+package br.com.ifsuldeminas.saleproject.sale;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

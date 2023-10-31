@@ -1,5 +1,6 @@
-package br.com.ifsuldeminas.ecommerce.sale;
+package br.com.ifsuldeminas.saleproject.sale;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,7 +13,7 @@ import jakarta.transaction.Transactional;
 public interface ISaleRepository extends JpaRepository<SaleModel, UUID> {
     
     @Query("SELECT p FROM tb_sale p WHERE p.userId = :id")
-    SaleModel findByIdUser(@Param("id") UUID id);
+    List<SaleModel> findByIdUser(@Param("id") UUID id);
 
     @Query("SELECT p from tb_sale p WHERE p.id = :id")
     SaleModel findByIdSale(@Param("id") UUID id);
