@@ -51,7 +51,7 @@ Inicie o container:
 docker compose up
 ```
 
-### <span id="#properties">2. Propriedades da Aplicação</span>
+### <span id="properties">2. Propriedades da Aplicação</span>
 
 Substitua o arquivo application.properties pelas credenciais definidas no container:
 
@@ -64,7 +64,7 @@ spring.datasource.password=<user_password>
 
 ```
 
-### <span id="#start">3. Inicialização do Sistema</span>
+### <span id="start">3. Inicialização do Sistema</span>
 
 ```bash
 mvn spring-boot:run
